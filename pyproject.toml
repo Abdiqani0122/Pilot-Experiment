@@ -1,0 +1,26 @@
+[project]
+name = "pilot-experiment"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Abdiqani Abdullahi", email = "abdiqaniabdullahi@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "agentdojo>=0.1.35",
+    "pandas>=3.1.0",
+    "scipy>=1.18.1",
+]
+
+[project.scripts]
+pilot-experiment = "pilot_experiment:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
