@@ -1320,6 +1320,7 @@ source = { editable = "." }
 dependencies = [
     { name = "agentdojo" },
     { name = "pandas" },
+    { name = "python-dotenv" },
     { name = "scipy" },
 ]
 
@@ -1332,6 +1333,7 @@ dev = [
 requires-dist = [
     { name = "agentdojo", specifier = ">=0.1.35" },
     { name = "pandas", specifier = ">=3.1.0" },
+    { name = "python-dotenv", specifier = ">=1.2.4" },
     { name = "scipy", specifier = ">=1.18.1" },
 ]
 
