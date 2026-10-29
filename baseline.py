@@ -107,7 +107,7 @@ def main() -> None:
     error = None
     utility = None
     try:
-    # Run the AgentDojo task without an attack
+        # Run the AgentDojo task without an attack
         utility, _ = suite.run_task_with_pipeline(
             agent,
             task,
@@ -115,7 +115,7 @@ def main() -> None:
             injections={},
         )
     except Exception as e:
-    # Record the error if the execution fails
+        # Record the error if the execution fails
         error = f"{type(e).__name__}: {e}"
 
     finished = datetime.now(timezone.utc)
@@ -152,6 +152,8 @@ def main() -> None:
     if error:
         print(f"ERROR:      {error}")
     print(f"saved:      {out_dir / 'result.json'}")
+    if error is not None:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
