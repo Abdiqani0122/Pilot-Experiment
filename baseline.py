@@ -107,11 +107,19 @@ def main() -> None:
     error = None
     utility = None
     try:
-        # injection_task=None and injections={} -> every placeholder gets its harmless default text.
-        utility, _ = suite.run_task_with_pipeline(agent, task, injection_task=None, injections={})
-    if error is not None:
-        raise SystemExit(1)
+    # Run the AgentDojo task without an attack
+        utility, _ = suite.run_task_with_pipeline(
+            agent,
+            task,
+            injection_task=None,
+            injections={},
+        )
+    except Exception as e:
+    # Record the error if the execution fails
+        error = f"{type(e).__name__}: {e}"
+
     finished = datetime.now(timezone.utc)
+
 
     final_answer, tool_calls = summarise_messages(agent.messages)
     result = {
