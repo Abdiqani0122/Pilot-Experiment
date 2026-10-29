@@ -1,10 +1,10 @@
 [project]
 name = "pilot-experiment"
 version = "0.1.0"
-description = "Add your description here"
+description = "Master's thesis pilot experiment investigating prompt injection attacks against tool-using AI agents using AgentDojo."
 readme = "README.md"
 authors = [
-    { name = "Abdiqani Abdullahi", email = "abdiqaniabdullahi@gmail.com" }
+    { name = "Abdiqani Abdullahi", email = "abdiqani0122@hotmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
